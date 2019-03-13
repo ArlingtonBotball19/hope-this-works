@@ -1,0 +1,38 @@
+#include <kipr/botball.h>
+
+int main()
+{
+    //go forward with two motors in ports 0,3 at 80% for 3 seconds, open claw arms
+    //and hit firefighters out of tube, grab with claws
+    enable_servos();  //turn on all servo ports
+    set_servo_position(0,1600);//arms are open
+   	motor(0,80);
+    motor(3,80);
+  	msleep(4000);
+      ao();
+    enable_servos();  //turn on all servo ports
+    set_servo_position(1,350);//arms are open
+    msleep(500);
+    set_servo_position(0,500);
+    msleep(500);
+    set_servo_position(0,1600);
+    msleep(500);
+    set_servo_position(0,500);
+    msleep(500);
+    set_servo_position(0,1600);
+    msleep(500);
+    set_servo_position(0,500);
+    msleep(500);
+    set_servo_position(0,1600);
+    msleep(500);
+    set_servo_position(0,500);
+    msleep(500);
+    set_servo_position(0,1000);
+    msleep(500);
+    set_servo_position(1,500);//arms are open
+    msleep(500);
+    set_servo_position(1,900);//arms are closed
+    msleep(500);
+        printf("Hello World\n");
+    return 0;
+}
