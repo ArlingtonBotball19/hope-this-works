@@ -1,6 +1,4 @@
-// Created on March 1, 2019
-// Error 37 - Deca 6.1
-// Version 6.9
+
 // creation of library for zip zip
 
 int main()
