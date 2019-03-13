@@ -1,6 +1,7 @@
-// Created on Sat March 21 2015
+// Created on March 1, 2019
 // Error 37 - Deca 6.1
 // Version 6.9
+// creation of library for zip zip
 
 int main()
 {
@@ -11,7 +12,7 @@ int main()
 	block_motor_done(3);
 	
 	enable_servos();
-	//open arm servo 1 hit poms
+	//open arm servo 1
 	set_servo_position(1,50);
 	set_servo_position(0,1350);
 	// give time for arm to open
@@ -37,10 +38,10 @@ int main()
 	//turn right
 	move_relative_position(3, 800, -700);
 	move_relative_position(0, 800, 700);
-	block_motor_done(2);
+	block_motor_done(3);
 	block_motor_done(0);
 			
-	//go forward towards cave
+	//go forward 
 	move_relative_position(0,1050,1850);
 	move_relative_position(3,1000,1850);
 	block_motor_done(0);
@@ -53,12 +54,12 @@ int main()
 	block_motor_done(0);
 	
 	enable_servos();
-	//open arm servo 0 collect poms
+	//open arm servo 0 
 	set_servo_position(0,2147);
 	// give time for arm to open
 	msleep(1000);
 	
-	//go back to end of cave end of cave
+	//go back 
 	set_servo_position(1,50);
 	move_relative_position(0,1200,4400);
 	move_relative_position(3,1150,4400);
@@ -66,17 +67,17 @@ int main()
 	block_motor_done(3);
 	enable_servos();
 	
-	//open arm servo 1 collect poms
+	//open arm servo 1 
 	set_servo_position(1,900);
 	// give time for arm to open
 	msleep(1000);
-	//go forward to right end of cave
+	//go forward to right 
 	move_relative_position(0,1200,-4700);
 	move_relative_position(3,1150,-4700);
 	block_motor_done(0);
 	block_motor_done(3);
 	
-	//close arm servo 1 with 4 poms
+	//close arm servo 1 
 	set_servo_position(1,900);
 	// give time for arm to close
 	msleep(1000);
